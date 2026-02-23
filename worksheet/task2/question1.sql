@@ -2,4 +2,5 @@
 -- Expected Columns:
 -- StudentId, FirstName, LastName, EnrolmentYear
 
-SELECT StudentId, FirstName, LastName, EnrolmentYear FROM student.db WHERE EnrolmentYear=2022;
+sqlite3 student.db
+SELECT StudentId, FirstName, LastName, EnrolmentYear FROM student WHERE EnrolmentYear=2022;
