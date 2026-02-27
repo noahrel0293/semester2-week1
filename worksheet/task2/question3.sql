@@ -2,4 +2,4 @@
 -- Expected Columns:
 -- DepartmentName, TotalEnrolments
 sqlite3 student.db
-SELECT DepartmentName, COUNT(CourseId) AS TotalEnrolments FROM ((Enrolment INNER JOIN Course ON Enrolment.CourseId = Course.CourseId) INNER JOIN Department ON Enrolment.DepartmentId = Department.DepartmentId) GROUP BY DepartmentName;
+SELECT department.DepartmentName, COUNT(enrolment.CourseId) AS TotalEnrolments FROM ((enrolment INNER JOIN course ON enrolment.CourseId = course.CourseId) INNER JOIN department ON course.DepartmentId = department.DepartmentId) GROUP BY department.DepartmentName;
